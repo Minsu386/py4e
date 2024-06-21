@@ -38,3 +38,33 @@ vals = list(eng2sp.values())
 # True
 ```
 
+## Dictionary as a set of counters
+----------------
+Creating a dictionary with characters as keys and counters as the corresponding values.
+Will add item to the dictionary if new. Afterwards will increment the value of an existing
+item.
+
+```python
+word = 'brontosaurus'
+d = dict()
+for c in word:
+    if c not in d:
+        d[c] = 1
+    else:
+    d[c] = d[c] + 1
+print(d)
+
+# {'b': 1, 'r': 2, 'o': 2, 'n': 1, 't': 1, 's': 2, 'a': 1, 'u': 2}
+
+# Alternative with `get`
+word = 'discussions'
+d = dict()
+for c in word:
+    d[c] = d.get(c,0) + 1
+print(d)
+
+```
+
+## Dictionary and Files
+
+
